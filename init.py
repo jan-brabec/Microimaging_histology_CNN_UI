@@ -1,16 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 17 11:43:08 2021
-
-@author: jb
-
-Initializes the setup
-"""
 
 from sample_class_def import *
-
-
 
 sample1 = c_sample(1)
 sample2 = c_sample(2)

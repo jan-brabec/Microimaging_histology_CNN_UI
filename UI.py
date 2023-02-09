@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-@author: Jan Brabec based on Jonas code
-"""
 
 import sys
 from PyQt5.QtWidgets import *
@@ -16,8 +13,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 from numpy import *
-
-from init import * #here it inicializes
+from init import * #own module
 
 
 class GraphPlotWindow(QMainWindow):
@@ -29,12 +25,9 @@ class GraphPlotWindow(QMainWindow):
         uic.loadUi("UI.ui", self)
         
         self.setWindowTitle("CNN fit visualisation tool")
-        
         self.radioButton_MD.setChecked(True)
-
         self.button_exit.clicked.connect(self.on_exit)
         self.fit_button.clicked.connect(self.on_plot)
-        
         self.figure = plt.figure()
         self.canvas = FigureCanvas(self.figure)        
         self.main_widget.layout().addWidget(self.canvas)
@@ -65,7 +58,6 @@ class GraphPlotWindow(QMainWindow):
         
         ax_1.scatter(eval(f"sample{self.sample}.ts_meas_{self.contrast}")\
                      ,eval(f"sample{self.sample}.ts_pred_{self.contrast}"))
-        
         test_R2 = eval(f"sample{self.sample}.test_R2_{self.contrast}")
         ax_1.set_title(f"Scatter plot, $R^2={test_R2:.2f}$")
         lims, dif_lims  = eval(f"sample{self.sample}.get_lims('{self.contrast}','{self.sample}')")
@@ -112,7 +104,6 @@ class GraphPlotWindow(QMainWindow):
         divider = make_axes_locatable(ax_4)
         cax = divider.append_axes('right', size='5%', pad=0.05)
         self.figure.colorbar(img, cax=cax, orientation='vertical', fraction=0.046)  
-
         self.figure.canvas.draw()
         self.figure.canvas.flush_events()
         self.figure.canvas.update()

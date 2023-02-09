@@ -1,7 +1,9 @@
-# Libraries
 import os
 from scipy import io
 import numpy as np
+
+
+
 
 def R2(y_meas,y_pred): #Computes R2 matrix
   return 1 - np.var(y_meas-y_pred)/(np.var(y_meas))
