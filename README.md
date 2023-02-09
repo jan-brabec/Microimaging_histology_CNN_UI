@@ -1,7 +1,7 @@
-# Graphical user interface (GUI) for convolution neural network fit result visualisation of a microimaing vs histology study in meningiomas.
+# Graphical user interface (GUI) for visualisation of convolution neural network (CNN) fitting in meningioma tumors.
 * This tool enables to visualize basic fitting results of the CNN network.
-* This code was created as part of course Scientific Programming in Python and Fortran 7.5 hp during the PhD. The purpose of this exercise was to create own python modules, classes and UI.
-* This code is not connected to an article but needs `summmary.mat` file from the repository [microimaging_vs_histology_in_meningeomas(https://github.com/jan-brabec/microimaging_vs_histology_in_meningeomas) in the folder `Step_e_Manuscript_figures`.
+* This code was created as part of course Scientific Programming in Python and Fortran 7.5 hp during the PhD. The purpose was to create own modules, classes, functions and user interface.
+* This code is not directly connected to an article but needs `summmary.mat` file from the repository [microimaging_vs_histology_in_meningeomas(https://github.com/jan-brabec/microimaging_vs_histology_in_meningeomas) in the folder `Step_e_Manuscript_figures`.
 * Contact: *jbrabec2 [at] jh [dot] edu*
 
 
